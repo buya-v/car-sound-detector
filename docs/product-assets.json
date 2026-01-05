@@ -1,0 +1,293 @@
+{
+  "customerPersona": {
+    "id": "customer-1",
+    "name": "Marcus Thorne",
+    "role": "VP of Digital Innovation",
+    "company": "AutoCare Solutions Group",
+    "background": "Marcus has spent 15 years in the automotive aftermarket sector, transitioning from fleet operations to executive leadership in digital transformation. He previously spearheaded a national loyalty program that integrated IoT devices into consumer vehicles and is now focused on leveraging AI to reduce customer friction in the repair process.",
+    "goals": [
+      "Increase lead generation for partner service centers by providing users with immediate diagnostic results",
+      "Establish the brand as the primary digital authority for non-technical drivers who feel intimidated by traditional mechanics",
+      "Collect anonymized acoustic data to build the world's largest proprietary database of vehicle failure signatures"
+    ],
+    "painPoints": [
+      "Low conversion rates from 'check engine' lights to actual service appointments due to user anxiety",
+      "The high cost of manual customer support for basic technical vehicle inquiries",
+      "Competition from legacy OBD-II scanner manufacturers who are beginning to enter the mobile app space"
+    ],
+    "successMetrics": [
+      "Conversion rate from 'Next Steps' screen to 'Locate a Mechanic' clicks",
+      "AI diagnosis accuracy verified by participating professional mechanics",
+      "Reduction in the average time between a fault detection and a service booking"
+    ],
+    "communicationStyle": "Results-oriented and high-level; prefers data-driven executive summaries and bi-weekly milestone demos over daily technical updates.",
+    "technicalLevel": "semi-technical"
+  },
+  "userPersonas": [
+    {
+      "id": "user-1",
+      "name": "Sarah Jenkins",
+      "role": "Primary User (Non-technical Owner)",
+      "age": "25-35",
+      "occupation": "Marketing Coordinator",
+      "background": "Sarah relies on her 8-year-old sedan for a daily 40-minute commute. She has no mechanical knowledge and feels a high level of anxiety whenever her car makes an unfamiliar noise, fearing she will be stranded or overcharged by a mechanic.",
+      "goals": [
+        "Determine if a new car sound requires immediate attention or can wait until the weekend",
+        "Avoid feeling uneducated or intimidated when talking to service advisors",
+        "Budget effectively for upcoming repairs based on realistic cost estimates"
+      ],
+      "frustrations": [
+        "Difficulty describing abstract sounds like 'thumping' or 'whirring' to professionals",
+        "The fear that a small sound indicates a catastrophic and expensive failure",
+        "Feeling pressured to agree to repairs she doesn't fully understand"
+      ],
+      "behaviors": [
+        "Turns down the radio to listen intently to engine noises",
+        "Searches YouTube for 'car making squeaking noise' to find a match",
+        "Asks friends or family members for their opinion on her car's health"
+      ],
+      "technicalLevel": "beginner",
+      "frequency": "occasional",
+      "devices": [
+        "mobile"
+      ],
+      "accessibility": [
+        "Visual urgency indicators (color-coded) for high-stress situations"
+      ]
+    },
+    {
+      "id": "user-2",
+      "name": "David Chen",
+      "role": "Secondary User (Used Car Buyer)",
+      "age": "18-25",
+      "occupation": "Graduate Student",
+      "background": "David is currently shopping for his first car on a limited budget. He spends his weekends visiting private sellers from online marketplaces and needs a quick, reliable way to vet the mechanical integrity of vehicles without paying for a professional inspection every time.",
+      "goals": [
+        "Identify 'red flag' engine or transmission noises during a short test drive",
+        "Use diagnostic data as leverage to negotiate a lower purchase price",
+        "Confirm that a seller's 'well-maintained' claim matches the actual acoustic signature of the car"
+      ],
+      "frustrations": [
+        "Sellers who are dishonest about the vehicle's mechanical history",
+        "The high cost and logistical difficulty of scheduling a pre-purchase inspection (PPI)",
+        "Wasting time traveling to see cars that have obvious mechanical flaws"
+      ],
+      "behaviors": [
+        "Checks the engine bay and undercarriage while the car is idling",
+        "Records clips of the car starting up to analyze later",
+        "Compares multiple vehicles within the same week"
+      ],
+      "technicalLevel": "intermediate",
+      "frequency": "weekly",
+      "devices": [
+        "mobile"
+      ],
+      "accessibility": [
+        "High-contrast UI for outdoor use in bright sunlight"
+      ]
+    },
+    {
+      "id": "user-3",
+      "name": "Marcus 'Mike' Rodriguez",
+      "role": "Secondary User (DIY Enthusiast)",
+      "age": "45-55",
+      "occupation": "IT Support Specialist",
+      "background": "Mike enjoys performing his own basic maintenance and minor repairs to save money and stay productive. While he is handy with a wrench, he sometimes struggles to pinpoint the exact source of a noise among various moving parts.",
+      "goals": [
+        "Validate his own mechanical hypothesis before purchasing replacement parts",
+        "Differentiate between similar-sounding issues like a bad alternator bearing versus a worn idler pulley",
+        "Track the health of his vehicle over time to prevent major failures"
+      ],
+      "frustrations": [
+        "Buying and installing a part only to find the noise persists",
+        "Ambient garage noise making it hard to isolate specific mechanical clicks",
+        "Difficulty finding reliable technical specs for older vehicle models"
+      ],
+      "behaviors": [
+        "Records sounds from multiple angles (under the hood vs. wheel well)",
+        "References digital forums and repair manuals alongside app results",
+        "Maintains a digital log of all repairs and diagnostic reports"
+      ],
+      "technicalLevel": "advanced",
+      "frequency": "monthly",
+      "devices": [
+        "mobile",
+        "tablet"
+      ],
+      "accessibility": [
+        "Text-to-speech for hands-free operation while working under the car"
+      ]
+    }
+  ],
+  "userStories": [
+    {
+      "id": "CSD-01",
+      "personaId": "Sarah Jenkins",
+      "epic": "Acoustic Data Acquisition & Analysis",
+      "title": "Noise-Isolated Audio Recording",
+      "story": "As a Non-technical Owner, I want the app to filter out background traffic and wind noise while I record, so that the diagnosis is accurate even if I am on the side of a busy road.",
+      "acceptanceCriteria": [
+        "Given the user is in the recording interface, when they press the 'Record' button, then the app captures audio for a minimum of 10 seconds and a maximum of 15 seconds.",
+        "Given the recording is in progress, when wind or ambient traffic noise is detected, then the Noise Isolation Algorithm automatically attenuates these frequencies in real-time.",
+        "Given the recording is complete, when the audio quality is too poor for analysis, then the user receives a prompt to 'Move closer to the sound source' and retry."
+      ],
+      "priority": "must-have",
+      "estimatedComplexity": "high",
+      "dependencies": [],
+      "status": "draft"
+    },
+    {
+      "id": "CSD-02",
+      "personaId": "Marcus 'Mike' Rodriguez",
+      "epic": "Acoustic Data Acquisition & Analysis",
+      "title": "Sound Origin Selection",
+      "story": "As a DIY Enthusiast, I want to select the general location of the sound (Engine Bay, Wheels, Undocarriage) before recording, so that the AI focuses on relevant fault signatures.",
+      "acceptanceCriteria": [
+        "Given the user opens the app, when they view the dashboard, then they are presented with selectable zones: Engine Bay, Wheels/Brakes, Suspension/Undocarriage, and Exhaust.",
+        "Given 'Wheels/Brakes' is selected, when the analysis begins, then the system prioritizes faults like 'Brake Grinding' or 'Wheel Bearing Hum' over engine knock.",
+        "Given a selection is made, when the recording screen loads, then a diagram shows the user where to position the phone for that specific zone."
+      ],
+      "priority": "must-have",
+      "estimatedComplexity": "low",
+      "dependencies": [
+        "CSD-01"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "CSD-03",
+      "personaId": "Sarah Jenkins",
+      "epic": "Diagnostic Reporting & Urgency",
+      "title": "Traffic Light Urgency Indicator",
+      "story": "As a Non-technical Owner, I want to see a Red, Yellow, or Green indicator after analysis, so that I immediately know if the car is unsafe to drive.",
+      "acceptanceCriteria": [
+        "Given the analysis identifies a critical failure (e.g., Rod Knock), when the results load, then a large Red indicator displays with the text 'Stop Driving Immediately / Tow Required'.",
+        "Given the analysis identifies a non-critical issue (e.g., Loose Heat Shield), when the results load, then a Green or Yellow indicator displays noting 'Safe to Drive'.",
+        "Given the user taps on the urgency indicator, when the modal opens, then a layman-friendly explanation of the risk (e.g., 'Engine seizure risk') is displayed."
+      ],
+      "priority": "must-have",
+      "estimatedComplexity": "medium",
+      "dependencies": [
+        "CSD-01"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "CSD-04",
+      "personaId": "David Chen",
+      "epic": "Diagnostic Reporting & Urgency",
+      "title": "Identification with Confidence Score",
+      "story": "As a Used Car Buyer, I want to see the identified malfunction name alongside a percentage confidence score, so that I can validate if a seller is hiding a major issue.",
+      "acceptanceCriteria": [
+        "Given the analysis is complete, when the result screen appears, then the primary diagnosis (e.g., 'Alternator Bearing Failure') is shown with a percentage (e.g., '87% Match').",
+        "Given the confidence score is below 60%, when the results are shown, then the app displays 'Inconclusive Result' and suggests potential causes rather than a definitive diagnosis.",
+        "Given a successful match, when the user expands the result, then a brief description of the mechanical failure is provided."
+      ],
+      "priority": "must-have",
+      "estimatedComplexity": "high",
+      "dependencies": [
+        "CSD-01"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "CSD-05",
+      "personaId": "Marcus 'Mike' Rodriguez",
+      "epic": "Diagnostic Reporting & Urgency",
+      "title": "Reference Sound Comparison",
+      "story": "As a DIY Enthusiast, I want to listen to a 'Known Fault' audio sample alongside my recording, so that I can personally verify the AI's diagnosis.",
+      "acceptanceCriteria": [
+        "Given a diagnosis is presented, when the user taps 'Compare Audio', then the UI displays two playback controls: 'Your Recording' and 'Reference Sample'.",
+        "Given the reference sample is playing, when the user plays their own recording, then the audio levels are normalized so they can be heard clearly side-by-side.",
+        "Given a complex sound, when comparing, then a simple visual waveform of both sounds is displayed to help visually match the rhythm."
+      ],
+      "priority": "could-have",
+      "estimatedComplexity": "medium",
+      "dependencies": [
+        "CSD-04"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "CSD-06",
+      "personaId": "David Chen",
+      "epic": "Repair Assistance & Partner Integration",
+      "title": "Repair Cost Estimator",
+      "story": "As a Used Car Buyer, I want to see an estimated repair price range for the diagnosed issue, so that I can negotiate that amount off the vehicle purchase price.",
+      "acceptanceCriteria": [
+        "Given a diagnosis (e.g., 'Serpentine Belt'), when the user views details, then a price range (e.g., '$150 - $250') is displayed based on national averages.",
+        "Given the user has not entered vehicle details, when viewing costs, then the app prompts for Make/Model/Year to refine the estimate.",
+        "Given a critical engine failure diagnosis, when the cost is displayed, then a disclaimer appears stating 'Major Repair - Professional Inspection Required'."
+      ],
+      "priority": "should-have",
+      "estimatedComplexity": "medium",
+      "dependencies": [
+        "CSD-04"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "CSD-07",
+      "personaId": "Sarah Jenkins",
+      "epic": "Repair Assistance & Partner Integration",
+      "title": "Local Partner Shop Locator",
+      "story": "As a Non-technical Owner, I want to see a list of top-rated local mechanics who specialize in my specific problem, so that I can book an appointment immediately.",
+      "acceptanceCriteria": [
+        "Given a diagnosis is displayed, when the user taps 'Fix This', then a map view loads showing partner repair shops within a 10-mile radius.",
+        "Given the list of shops, when displayed, then shops are sorted by user rating and include a 'Partner' badge for verified service centers.",
+        "Given a specific shop card, when tapped, then the user can directly call or navigate to the shop via their default map app."
+      ],
+      "priority": "must-have",
+      "estimatedComplexity": "medium",
+      "dependencies": [
+        "CSD-06"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "CSD-08",
+      "personaId": "Sarah Jenkins",
+      "epic": "Repair Assistance & Partner Integration",
+      "title": "Shareable Diagnostic Report",
+      "story": "As a Non-technical Owner, I want to generate a shareable link of the diagnosis and audio, so that I can send it to a mechanic before I arrive.",
+      "acceptanceCriteria": [
+        "Given a completed diagnosis, when the user selects 'Share', then a unique web link is generated containing the fault name, severity, and audio clip.",
+        "Given the recipient opens the link, when the page loads, then they see the 'Car Sound Detector' branding and the specific diagnostic details without needing to install the app.",
+        "Given the user wants to keep it private, when sharing, then no personal user location data is included in the shared report."
+      ],
+      "priority": "should-have",
+      "estimatedComplexity": "low",
+      "dependencies": [
+        "CSD-04"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "CSD-09",
+      "personaId": "David Chen",
+      "epic": "Session Management & History",
+      "title": "Scan History Log",
+      "story": "As a Used Car Buyer, I want to save scans with custom labels (e.g., '2018 Ford Focus'), so that I can compare different cars I test drove later in the day.",
+      "acceptanceCriteria": [
+        "Given a scan is complete, when prompted, then the user can enter a custom text label for the session.",
+        "Given the user navigates to the 'History' tab, when the list loads, then previous scans are displayed chronologically with their labels and urgency colors.",
+        "Given a saved scan, when tapped, then the full diagnostic report and audio recording are reloaded."
+      ],
+      "priority": "should-have",
+      "estimatedComplexity": "low",
+      "dependencies": [
+        "CSD-04"
+      ],
+      "status": "draft"
+    }
+  ],
+  "epics": [
+    "Acoustic Data Acquisition & Analysis",
+    "Diagnostic Reporting & Urgency",
+    "Repair Assistance & Partner Integration",
+    "Session Management & History"
+  ],
+  "createdAt": 1767597280952,
+  "updatedAt": 1767597280952,
+  "version": 1
+}
